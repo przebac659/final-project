@@ -1,0 +1,38 @@
++---------------------------------------+
+|               Variables               |
++---------------------------------------+
+| - price_type: str                     |
+| - epochs: int                         |
+| - startDate: str                      |
+| - endDate: str                        |
+| - interval: str                       |
+| - chunkSize: int                      |
+| - company_name: list[str]             |
++---------------------------------------+
+
++---------------------------------------+
+|            NeuralNetwork              |
++---------------------------------------+
+| - model: Sequential                   |
++---------------------------------------+
+| + build_model(data_prediction)        |
+| + evaluate_model(data_prediction,     |
+|                  data_result)         |
+| + save_model(name)                    |
+| + load_model(name)                    |
+| + predict_prices(data_prediction)     |
++---------------------------------------+
+
++---------------------------------------+
+|             MainWindow                |
++---------------------------------------+
+| - predict_button: QPushButton         |
+| - image: QPixmap                      |
+| - label_plot: QLabel                  |
+| - select_mode: QComboBox              |
++---------------------------------------+
+| + start()                             |
+| + setup_ui()                          |
+| + predict_button_click()              |
+| _createMenuBar()                      |
++---------------------------------------+
