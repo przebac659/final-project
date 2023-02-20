@@ -1,13 +1,53 @@
 \chapter{[Problem analysis]}
 
+\section*{What is AI and what can it be used for}
+As the Cambridge Dictionary states, Artificial Intelligence is “the study of how to produce machines that have some of the qualities that the human mind has, such as the ability to understand language, recognize pictures, solve problems, and learn”. It can be concluded that Artificial Intelligence is a field of science whose goal is to replace the work of humans with machines.
+AI is used for a wide variety of tasks and applications. Some examples include:
 \begin{itemize}
-\item  problem analysis
-\item state of the art, problem statement
-\item  literature research (all sources in the thesis have to be referenced \cite{bib:article,bib:book,bib:conference,bib:internet})
-\item description of existing solutions (also scientific ones, if the problem is scientifically researched), algorithms,  location of the thesis in the scientific domain
-\end{itemize}
+    \item Image and speech recognition: AI algorithms can be trained to identify objects, people, or words in images or audio recordings.
+    \item Language understanding: AI can be used to interpret and respond to natural language inputs, such as in virtual assistants or chatbots.
+    \item Predictive analytics: AI can be used to analyze large data sets and make predictions about future events or trends.
+    \item Robotics: AI controls and navigates robots, allowing them to perform tasks such as assembly line work or search-and-rescue operations.
+    \item Self-driving cars: AI is used to interpret sensor data and decide how to control the car.
+    \item Healthcare: AI can be used to analyze medical images, identify potential health risks, and assist doctors in making diagnoses.
+    \item Fraud detection: AI can be used to identify suspicious patterns of behavior in financial transactions.
+\end{itemize} 
+These are just a few examples of the many ways AI is being used today, and as the technology continues to advance, it is likely to be used in an even wider range of applications in the future.
 
+\section*{AI in stock prediction}
+Since the beginning of Artificial Intelligence, people have wanted to use it for profit. The concept of a program that would be able to predict the future of the stock market is an idea that inspires many engineers to act. This is an unachievable goal, but AI is constantly evolving thanks to this challenge.
 
+Predicting stock prices is a challenging task that has been the subject of much research in AI and machine learning. Various neural network architectures have been used for this task, and the choice of architecture will depend on the specific characteristics of the data and the problem at hand.
+Some popular architectures that have been used for stock price prediction include:
+\begin{itemize}
+    \item Recurrent Neural Networks (RNNs): RNNs are particularly well-suited to sequential data, such as time series data, and have been used to predict stock prices by analyzing historical price and trading volume data.
+    \item Long Short-Term Memory (LSTM) networks: LSTMs are a type of RNN that are able to maintain a long-term memory of the inputs it has seen and has been used to predict stock prices by analyzing historical price data.
+    \item Convolutional Neural Networks (CNNs): CNNs are a type of neural network that are particularly well-suited to image and video data and have been used to predict stock prices by analyzing images of stock charts.
+    \item Gated Recurrent Units (GRUs): Similar to LSTMs but with less computational complexity.
+\end{itemize} 
+It is worth noting that stock price prediction is a complex problem, and only some models would work best for some scenarios. Many other variables, such as news, announcements, market sentiments, and trends, also need to be taken into account and can be incorporated into the model using techniques like Sentiment Analysis and Named Entity Recognition.
+It is also important to mention that stock prices are highly dynamic and non-linear, making it difficult to predict with high accuracy, and multiple models with different architectures may need to be combined to produce an accurate prediction.
+\par
+For this project, LSTM model have been chosen to predict the stock prices. 
+One of the main reasons why LSTMs may be well-suited for stock price prediction is their ability to maintain a long-term memory of the inputs they have seen. Stock prices are a type of time series data, which means that the current price of a stock is likely to be influenced by a long sequence of previous prices and other related financial data, such as trading volume and market sentiment. Because LSTMs can maintain a long-term memory of the inputs they have seen, they can understand patterns or dependencies in the data that may span multiple time steps, making them well-suited to analyze historical price data and make predictions about future price movements.
+Another reason LSTMs may be well-suited for stock price prediction is that they can handle input data with high dimensionality and noise. Stock prices are influenced by various factors, such as economic indicators, company news, and global events, which can be challenging to quantify or predict. LSTMs are able to handle input data with high dimensionality and high noise, making them well-suited to analyze a wide range of financial data and make predictions about future price movements.
+Stock price prediction is a complicated problem and no single model would work best for every scenario. LSTM might work well on one dataset and not on another. Also, LSTMs alone might not be enough to accurately predict stock prices, and other techniques such as Sentiment Analysis and Named Entity Recognition, as well as other variables such as news, announcements, market sentiments and trends, may need to be taken into account and can be incorporated into the model.
+\par
+LSTM stands for Long Short-Term Memory. It is a type of Recurrent Neural Network (RNN) architecture that is used to process sequential data, such as time series or natural language.
+An RNN processes input data one step at a time, maintaining an internal "memory" of the inputs it has seen. This allows the network to understand patterns or dependencies in the data that may span multiple time steps. However, the simple RNN architecture has a problem known as the "vanishing gradients" problem, where the gradients of the error concerning the parameters of the network become very small as they are backpropagated through multiple time steps.
+By introducing a number of "gates" that regulate the movement of data into and out of the network's memory, LSTM finds a solution to this issue. These gates can be thought of as "switches" that turn the flow of information on and off, allowing the network to maintain a much longer-term memory of the inputs it has seen.
+The LSTM architecture is used in various sequential data processing tasks, such as natural language processing, speech recognition, and time series prediction. LSTM is particularly well-suited to tasks where the output depends on a long sequence of prior inputs, such as in natural language processing or stock price prediction, as the output depends on many data
+
+\section*{Prediction of the stock market}
+Stock prices can be predicted using a combination of methods, including technical analysis, fundamental analysis, quantitative analysis, and news analysis.
+
+\begin{itemize}
+    \item Technical analysis: This method involves analyzing charts and historical data to identify patterns and trends that can indicate future stock price movements. Technical analysts look at factors such as support and resistance levels, moving averages, and trading volume to make predictions about future price movements.
+    \item Fundamental analysis: This method involves analyzing a company's financial and economic fundamentals, such as earnings, revenue, and debt, to determine its intrinsic value and potential for future growth. Fundamental analysts look at a company's financial statements and other financial metrics to predict its future performance and stock price.
+    \item Quantitative analysis: This method involves using mathematical models and algorithms to analyze financial data and make predictions about future stock prices. Quantitative analysts use statistical methods and machine learning techniques to analyze large amounts of data and make predictions about future stock prices.
+    \item News analysis: This method involves analyzing news and events that may impact a company's stock price, such as changes in management, mergers, and acquisitions, or regulatory developments.
+    \item It is important to note that no method is perfect, and past performance does not guarantee future results. Additionally, stock prices can be affected by many factors, including macroeconomic conditions, geopolitical events, and investor sentiment, which can be challenging to predict.
+\end{itemize} 
 
 Mathematical formulae  
 \begin{align}

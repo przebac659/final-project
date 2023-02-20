@@ -3,7 +3,6 @@ from sys import argv
 
 import numpy as np
 from PyQt6 import QtGui
-from PyQt6.QtCharts import QChart, QChartView, QLineSeries
 from PyQt6.QtGui import QPainter, QAction, QColor, QPixmap
 from PyQt6.QtWidgets import (
     QApplication,
@@ -20,15 +19,7 @@ from PyQt6.QtWidgets import (
     QLabel,
     QComboBox,
 )
-from PyQt6.QtCore import Qt
-import matplotlib.pyplot as plt
-from PyQt6.QtWidgets import QApplication
-import sys
-from data_handler import Data
-from neural_network import NeuralNetwork
-from graphics import MainWindow
 from variables import Variables
-from sklearn.preprocessing import minmax_scale
 
 
 class MainWindow(QMainWindow):
@@ -55,7 +46,7 @@ class MainWindow(QMainWindow):
 
         self.predict_button = QPushButton(self)
         self.predict_button.setText("Predict stock market!")
-        self.predict_button.clicked.connect(self.predict_button_click)
+        # self.predict_button.clicked.connect(self.predict_button_click)
 
         # ******** Image *********
 
@@ -67,10 +58,9 @@ class MainWindow(QMainWindow):
         # ****** Menu ******
 
         self.select_mode = QComboBox()
-        # self.select_mode.addItem("Google")
-        # self.select_mode.addItem("Apple")
         for v in Variables.company_name:
             self.select_mode.addItem(v)
+        self.select_mode.currentIndexChanged.connect(self.update_image)
 
         # self.label_band1 = QLabel("Band #1", self)
         # self.label_band1.setFixedSize(40, 20)
@@ -101,7 +91,7 @@ class MainWindow(QMainWindow):
         """Change the order of toolbars; maybe select_point/area to toolbar1?"""
 
         lower_panel.addWidget(self.select_mode)
-        lower_panel.addWidget(self.predict_button)
+        # lower_panel.addWidget(self.predict_button)
         upper_panel.addWidget(self.label_plot)
         # upper_panel.addWidget(self.chart_view)
 
@@ -162,10 +152,34 @@ class MainWindow(QMainWindow):
 
     """Methods responsible for handling interaction with buttons etc."""
 
-    def predict_button_click(self):
-        print("clicked predict button!")
-        # future_prices = network.predict_prices(data_prediction)
-        # print_results(future_prices, data_result, highest_price)
+    # def predict_button_click(self):
+    #     print("clicked predict button!")
+    #     self.image = QPixmap("plots/AAPL.png")
+    #     self.label_plot.setPixmap(self.image)
+
+    def update_image(self, index):
+        # get the text of the selected item
+        selected_item_text = self.select_mode.currentText()
+
+        # load the corresponding image and set it to the QLabel
+        if selected_item_text == Variables.company_name[0]:
+            pixmap = QPixmap('plots/' + Variables.company_name[0] + '.png')
+            self.label_plot.setPixmap(pixmap)
+        elif selected_item_text == Variables.company_name[1]:
+            pixmap = QPixmap('plots/' + Variables.company_name[1] + '.png')
+            self.label_plot.setPixmap(pixmap)
+        elif selected_item_text == Variables.company_name[2]:
+            pixmap = QPixmap('plots/' + Variables.company_name[2] + '.png')
+            self.label_plot.setPixmap(pixmap)
+        elif selected_item_text == Variables.company_name[3]:
+            pixmap = QPixmap('plots/' + Variables.company_name[3] + '.png')
+            self.label_plot.setPixmap(pixmap)
+        elif selected_item_text == Variables.company_name[4]:
+            pixmap = QPixmap('plots/' + Variables.company_name[4] + '.png')
+            self.label_plot.setPixmap(pixmap)
+        elif selected_item_text == Variables.company_name[5]:
+            pixmap = QPixmap('plots/' + Variables.company_name[5] + '.png')
+            self.label_plot.setPixmap(pixmap)
 
 
     def open_click(self):
@@ -181,39 +195,39 @@ class MainWindow(QMainWindow):
         # sys.exit() to definitely terminate the program
         sys.exit()
 
-def print_results(future_price, data_result, highest_price):
-    # print(data_result)
-    data_result = minmax_scale(data_result, feature_range=(0,highest_price))
-    future_price = minmax_scale(future_price, feature_range=(0,highest_price))
-    plt.plot(future_price, 'r', data_result, 'b')
-    # plt.title(("Real and predicted price of " + company_name + " stock"))
-    plt.title(("Real and predicted price of stock"))
-    plt.xlabel('Time [days]')
-    plt.ylabel('Price [$]')
-    plt.legend(['Predicted price', 'Real price'])
-    # plt.figure(dpi=300)
-    # plt.plot(data_result)
-    # plt.show()
-    plt.savefig('plots/'+Variables.company_name)
+# def print_results(future_price, data_result, highest_price):
+#     # print(data_result)
+#     data_result = minmax_scale(data_result, feature_range=(0,highest_price))
+#     future_price = minmax_scale(future_price, feature_range=(0,highest_price))
+#     plt.plot(future_price, 'r', data_result, 'b')
+#     # plt.title(("Real and predicted price of " + company_name + " stock"))
+#     plt.title(("Real and predicted price of stock"))
+#     plt.xlabel('Time [days]')
+#     plt.ylabel('Price [$]')
+#     plt.legend(['Predicted price', 'Real price'])
+#     # plt.figure(dpi=300)
+#     # plt.plot(data_result)
+#     # plt.show()
+#     plt.savefig('plots/'+Variables.company_name)
 
-def main():
-    chosen_data = Data()
-    highest_price = chosen_data.prepare_arrays()
-    data_prediction, data_result = chosen_data.reshape_data()
+# def main():
+#     chosen_data = Data()
+#     highest_price = chosen_data.prepare_arrays()
+#     data_prediction, data_result = chosen_data.reshape_data()
 
-    network = NeuralNetwork()
-    network.build_model(data_prediction)
-    network.evaluate_model(data_prediction, data_result)
-    network.save_model('model2')
-    # network.load_model('model1')
-    # future_prices = network.predict_prices(data_prediction)
-    # print_results(future_prices, data_result, highest_price)
+#     network = NeuralNetwork()
+#     network.build_model(data_prediction)
+#     network.evaluate_model(data_prediction, data_result)
+#     network.save_model('model2')
+#     # network.load_model('model1')
+#     # future_prices = network.predict_prices(data_prediction)
+#     # print_results(future_prices, data_result, highest_price)
 
-    a = QApplication(argv)
-    main_window = MainWindow()
-    main_window.start()
-    a.exec()
+#     a = QApplication(argv)
+#     main_window = MainWindow()
+#     main_window.start()
+#     a.exec()
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

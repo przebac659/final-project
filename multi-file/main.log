@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.15)  18 FEB 2023 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.15)  20 FEB 2023 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,8 +1198,11 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) (./main.aux
+
+LaTeX Warning: Label `fig:pseudocode:listings' multiply defined.
+
 )
-No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
@@ -1220,6 +1223,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
 LaTeX Font Info:    ... okay on input line 104.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 104.
 LaTeX Font Info:    ... okay on input line 104.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1292,6 +1296,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 104.
 LaTeX Info: Redefining \pageref on input line 104.
 LaTeX Info: Redefining \nameref on input line 104.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1374,61 +1380,54 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
  (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<graf/politechnika_sl_logo_bw_pion_en.pdf, id=7, 179.67125pt x 230.8625pt>
+<graf/politechnika_sl_logo_bw_pion_en.pdf, id=58, 179.67125pt x 230.8625pt>
 File: graf/politechnika_sl_logo_bw_pion_en.pdf Graphic file (type pdf)
 <use graf/politechnika_sl_logo_bw_pion_en.pdf>
 Package pdftex.def Info: graf/politechnika_sl_logo_bw_pion_en.pdf  used on inpu
 t line 24.
 (pdftex.def)             Requested size: 142.26378pt x 182.80913pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-7.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+8.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-7.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+8.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-37.
+58.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-37.
+58.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 37.
+(Font)              <14.4> on input line 58.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 37.
+(Font)              <10> on input line 58.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 37.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+(Font)              <7> on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 49.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 49.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 49.
- [1
+) [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./graf/politechnika_sl_log
@@ -1437,7 +1436,7 @@ o_bw_pion_en.pdf>]) [2
 
 ] (./chapters/00.tex) [3] [4
 
-]
+] (./main.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -1445,12 +1444,8 @@ o_bw_pion_en.pdf>]) [2
 
 ] (./chapters/01.tex
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-.
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) (./chapters/02.texpdfTeX warning (ext4): destination with the same identifie
-r (name{page.1}) has been already used, duplicate ignored
+) (./chapters/02.texpdfTeX warning (ext4): destination with the same identifier
+ (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
@@ -1475,24 +1470,16 @@ l.1 \chapter
 
 ]
 Chapter 2.
-
-LaTeX Warning: Citation 'bib:article' on page 3 undefined on input line 6.
-
-
-LaTeX Warning: Citation 'bib:book' on page 3 undefined on input line 6.
-
-
-LaTeX Warning: Citation 'bib:conference' on page 3 undefined on input line 6.
-
-
-LaTeX Warning: Citation 'bib:internet' on page 3 undefined on input line 6.
-
-) (./chapters/03.texpdfTeX warning (ext4): destination with the same identifier
- (name{page.3}) has been already used, duplicate ignored
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
+.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Requirements and tools} [3]
+l.17 \section
+             *{AI in stock prediction} [3]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1505,17 +1492,33 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Requirements and tools} [4
+l.35 \par
+          [4]
+Underfull \vbox (badness 1308) has occurred while \output is active []
 
-]
-Chapter 3.
-) (./chapters/04.texpdfTeX warning (ext4): destination with the same identifier
- (name{page.5}) has been already used, duplicate ignored
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {External specification} [5]
+l.46     \item F
+                undamental analysis: This method involves analyzing a compan...
+[5]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 53.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 53.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 53.
+) (./chapters/03.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1529,11 +1532,11 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {External specification} [6
+            {Requirements and tools} [6]
+Chapter 3.
+[7
 
 ]
-Chapter 4.
-) (./chapters/05.tex [7]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1542,20 +1545,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8
+[8]
 
-]
-Chapter 5.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-4.
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-LaTeX Warning: Reference `fig:pseudocode:listings' on page 9 undefined on input
- line 25.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]) (./chapters/06.tex
+[9]) (./chapters/04.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1565,8 +1564,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
+Chapter 4.
+) (./chapters/05.tex [11
+
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12
+
+]
+Chapter 5.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+4.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [13]) (./chapters/06.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
 Chapter 6.
-) (./chapters/07.tex [11
+) (./chapters/07.tex [15
 
 
 ]
@@ -1578,28 +1608,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
+[16]
 Chapter 7.
-) [13
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14
-
-]
-
-LaTeX Warning: Empty bibliography on input line 163.
-
-[15
-
-] [16] (./chapters/08.tex) (./chapters/09.tex [17
+) [17
 
 ]
 
@@ -1612,18 +1623,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18
 
-]) (./chapters/10.tex [19]
+]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+LaTeX Warning: Empty bibliography on input line 163.
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+[19
 
-[20
+] [20] (./chapters/08.tex) (./chapters/09.tex [21
 
-]) [21]
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1634,11 +1642,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22
 
-]
-\tf@lof=\write7
-\openout7 = `main.lof'.
-
- [23]
+]) (./chapters/10.tex [23]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1649,40 +1653,52 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24
 
-]
+]) [25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26
+
+] (./main.lof)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+ [27]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28
+
+] (./main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [25] (./main.aux)
+ [29] (./main.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  768835D265D837572EE0E03DDA8099AE;2063.
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 1B17DD8EE355F13C83F6F29A838E2350;2063.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45075 strings out of 480212
- 991225 string characters out of 5895275
- 1724586 words of memory out of 5000000
- 62233 multiletter control sequences out of 15000+600000
- 526982 words of font info for 74 fonts, out of 8000000 for 9000
+ 44982 strings out of 480212
+ 988675 string characters out of 5895275
+ 1724563 words of memory out of 5000000
+ 62110 multiletter control sequences out of 15000+600000
+ 532995 words of font info for 76 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  89i,11n,92p,1891b,2363s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -1695,10 +1711,10 @@ e1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on main.pdf (31 pages, 209079 bytes).
+Output written on main.pdf (35 pages, 231003 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 67 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 
