@@ -11,56 +11,71 @@
 \item UML diagrams
 \end{itemize}
 
+\section*{Documentation}
 
-
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% To use the minted packages uncomment the package import in        %
-% file config/settings.tex :  \usepackage{minted}                   %
-% and compile with the shell escape                                 %
-% pdflatex -shell-escape main                                       %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-
-Use special environments for inline code, eg  \lstinline|int a;| (package \texttt{listings})% or  \mintinline{C++}|int a;| (package \texttt{minted})
-. Longer parts of code put in the figure environment, eg. code in Fig. \ref{fig:pseudocode:listings}% and Fig. \ref{fig:pseudocode:minted}
-. Very long listings–move to an appendix.
-
+This section consists of variables that are used later in the project. By changing these values, modification of the application is possible. All variables that matter are stored here. company{\_}name and price{\_}type are used in reading data from Yahoo Finance. In company{\_}name, the NASDAQ (National Association of Securities Dealers Automated Quotations) ticker symbol should be imputed so that the appropriate company data could be read. The ticker symbol is an abbreviation of the company name used in NASDAQ to associate a particular company with its data. In price{\_}type, the type of price that should be read should be specified from open price (open), closing price (close), the highest price of the given period of time (high), lowest price of the given period of time (low) or the volume traded (volume).
 
 \clearpage
 \begin{figure}
 \centering
 \begin{lstlisting}
-class test : public basic
-{
-    public:
-      test (int a);
-      friend std::ostream operator<<(std::ostream & s, 
-                                     const test & t);
-    protected:
-      int _a;  
-      
-};
+  # Variables
+  company_name = 'GOOGL' # company NASDAQ name
+  price_type = 'open' # open, close, high, low, volume
+  
+  
+  # Time interval
+  startDate = '2021-06-01'
+  endDate = '2022-06-01'
+  interval = 'daily' # daily, weekly or monthly
+  
+  
+  # Shape of input data
+  chunkSize = 20
 \end{lstlisting}
-\caption{Pseudocode in \texttt{listings}.}
+\caption{Variables.}
 \label{fig:pseudocode:listings}
 \end{figure}
 
-%\begin{figure}
-%\centering
-%\begin{minted}[linenos,frame=lines]{c++}
-%class test : public basic
-%{
-%    public:
-%      test (int a);
-%      friend std::ostream operator<<(std::ostream & s, 
-%                                     const test & t);
-%    protected:
-%      int _a;  
-%      
-%};
-%\end{minted}
-%\caption{Pseudocode in \texttt{minted}.}
-%\label{fig:pseudocode:minted}
-%\end{figure}
+YahooFinancials is easy to use and outputs raw data that can be conveniently used later. data{\_}price{\_}raw stores all data of a given company in the time period between startDate and endDate in chosen intervals. data{\_}prices stores only the prices without the index of date, name, et cetera.
+Two ‘for loops’ append the data to the arrays created earlier. The data is assigned so that the neural network’s input data is the chosen number of days, and the test data is the next day so that the next day can be predicted on the chosen number of the days before it. For example, for chosen 30 days, the input data are 29 days, and the output should be the one next day (29:1).
 
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+  yahoo_financials = YahooFinancials(company_name)
+  data_prices_raw = yahoo_financials.get_historical_price_data(startDate, endDate, interval)
+  data_prices = data_prices_raw[company_name]['prices']
+  
+  
+  for i in range(len(data_prices)):
+   data.append(data_prices[i][price_type])
+  
+  
+  for i in range(chunkSize, len(data_prices) - 1):
+   data_prediction.append(data[i-chunkSize:i])
+   data_result.append(data[i])
+\end{lstlisting}
+\caption{Working with the stock market data.}
+\label{fig:pseudocode:listings}
+\end{figure}
 
+In order to train the model, the gathered data should be reshaped so that they have three dimensions. This operation can be done with a few arithmetic operations, but it is more convenient to use reliable methods to do so. Firstly, the given data is transformed with minmax{\_}scale() to normalize the data between 0 and 0.999. Then using the numpy reshape() function, the data is reshaped into three dimensions.
+
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+  # Reshape the data
+  # into 3 dimensions
+  data_result, data_prediction = np.array(data_result), np.array(data_prediction)
+  
+  
+  data_prediction = minmax_scale(data_prediction, feature_range=(0,.999))
+  data_prediction = np.reshape(data_prediction, (data_prediction.shape[0], data_prediction.shape[1], 1))
+  data_result = minmax_scale(data_result, feature_range=(0,.999)
+\end{lstlisting}
+\caption{Reshaping data.}
+\label{fig:pseudocode:listings}
+\end{figure}

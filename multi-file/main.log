@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.15)  20 FEB 2023 13:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.15)  20 FEB 2023 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,6 +1202,12 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 LaTeX Warning: Label `fig:pseudocode:listings' multiply defined.
 
+
+LaTeX Warning: Label `fig:pseudocode:listings' multiply defined.
+
+
+LaTeX Warning: Label `fig:pseudocode:listings' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1581,11 +1587,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 5.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-4.
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [13]) (./chapters/06.tex
+[13]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1594,12 +1596,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14]
-Chapter 6.
-) (./chapters/07.tex [15
-
+[14
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15
+
+]) (./chapters/06.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1609,8 +1619,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-Chapter 7.
-) [17
+Chapter 6.
+) (./chapters/07.tex [17
+
 
 ]
 
@@ -1621,28 +1632,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18
+[18]
+Chapter 7.
+) [19
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20
 
 ]
 
 LaTeX Warning: Empty bibliography on input line 163.
 
-[19
+[21
 
-] [20] (./chapters/08.tex) (./chapters/09.tex [21
+] [22] (./chapters/08.tex) (./chapters/09.tex [23
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[22
-
-]) (./chapters/10.tex [23]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1653,7 +1666,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24
 
-]) [25]
+]) (./chapters/10.tex [25]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1664,11 +1677,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26
 
-] (./main.lof)
-\tf@lof=\write7
-\openout7 = `main.lof'.
-
- [27]
+]) [27]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1679,26 +1688,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [28
 
+] (./main.lof)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+ [29]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30
+
 ] (./main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [29] (./main.aux)
+ [31] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1B17DD8EE355F13C83F6F29A838E2350;2063.
+(rerunfilecheck)             Checksum: C7405277F5D946237384325FBC9913AD;2063.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44982 strings out of 480212
- 988675 string characters out of 5895275
+ 45033 strings out of 480212
+ 989257 string characters out of 5895275
  1724563 words of memory out of 5000000
- 62110 multiletter control sequences out of 15000+600000
- 532995 words of font info for 76 fonts, out of 8000000 for 9000
+ 62135 multiletter control sequences out of 15000+600000
+ 532677 words of font info for 75 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  89i,11n,92p,1891b,2363s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -1708,13 +1732,12 @@ thsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb>
-Output written on main.pdf (35 pages, 231003 bytes).
+usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (37 pages, 217983 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
+ 387 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 115 named destinations out of 1000 (max. 500000)
  122 words of extra memory for PDF output out of 10000 (max. 10000000)
 

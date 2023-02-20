@@ -47,18 +47,43 @@ NumPy is a Python library that stands for 'Numerical Python'. It is used for wor
 Pyplot is a sublibrary within the Matplotlib library for Python. It provides a convenient interface for creating a variety of different types of plots and charts, such as line plots, scatter plots, histograms, and more. Pyplot is based on the MATLAB plotting functions and provides a similar interface to the MATLAB plotting functions. It provides a simple way to create plots and charts with just a few lines of code.
 \par
 Scikit-learn (also known as sklearn) is a machine learning library for the Python programming language. It provides a range of supervised and unsupervised learning algorithms in Python for data mining and data analysis. It provides several preprocessing tools that can be used to prepare data for machine learning algorithms.
-
+\par
+PyQt is a framework dedicated to building applications with a graphical interface using Python programming language. PyQt provides a range of modules and classes that developers can use to create GUI elements, such as buttons, dialogs, menus, and more. It also provides support for handling events, managing layouts, and working with various data types and formats.
 \clearpage
 \begin{figure}
 \centering
 \begin{lstlisting}
+    from PyQt6 import QtGui
+    from PyQt6.QtGui import QPainter, QAction, QColor, QPixmap
+    from PyQt6.QtWidgets import (
+        QApplication,
+        QMainWindow,
+        QPushButton,
+        QMenuBar,
+        QMenu,
+        QFrame,
+        QGridLayout,
+        QVBoxLayout,
+        QHBoxLayout,
+        QWidget,
+        QSlider,
+        QLabel,
+        QComboBox,
+    )
+    
     from yahoofinancials import YahooFinancials
-    import numpy as np
-    import matplotlib.pyplot as plt
-    from sklearn.preprocessing import minmax_scale
-    from keras.models import Sequential
+    
+    from keras.models import Sequential, load_model
     from keras.layers import Dense, Dropout, LSTM
+    
+    from sys import argv
+    
+    import matplotlib.pyplot as plt
+    
+    import numpy as np
+    from sklearn.preprocessing import minmax_scale
 \end{lstlisting}
 \caption{Libraries used for this project.}
 \label{fig:pseudocode:listings}
 \end{figure}
+

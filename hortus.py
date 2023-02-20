@@ -34,26 +34,23 @@ def print_results(future_price, data_result, highest_price):
     plt.clf()
 
 if __name__ == "__main__":
-    # PLACEHOLDER
-    print('something')
-    
     # chosen_data = Data(company_enum)
     # highest_price = chosen_data.prepare_arrays()
     # data_prediction, data_result = chosen_data.reshape_data()
-    network = NeuralNetwork()
+    # network = NeuralNetwork()
     # network.build_model(data_prediction)
     # network.evaluate_model(data_prediction, data_result)
-    # network.save_model('model7')
-    network.load_model('model7')
+    # # network.save_model('model7')
+    # # network.load_model('model7')
 
-    for i in range(0,6):
-        company_enum = i
-        chosen_data1 = Data(company_enum)
-        highest_price = chosen_data1.prepare_arrays()
-        data_prediction, data_result = chosen_data1.reshape_data()
+    # for i in range(0,6):
+    #     company_enum = i
+    #     chosen_data1 = Data(company_enum)
+    #     highest_price = chosen_data1.prepare_arrays()
+    #     data_prediction, data_result = chosen_data1.reshape_data()
         
-        future_prices = network.predict_prices(data_prediction)
-        print_results(future_prices, data_result, highest_price)
+    #     future_prices = network.predict_prices(data_prediction)
+    #     print_results(future_prices, data_result, highest_price)
 
     a = QApplication(argv)
     main_window = MainWindow()
