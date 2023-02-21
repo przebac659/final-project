@@ -6,31 +6,237 @@
 \item results of experiments (optional)
 \end{itemize}
 
- 
-\begin{table}
-\centering
-\caption{A caption of a table is \textbf{above} it.}
-\label{id:tab:wyniki}
-\begin{tabular}{rrrrrrrr}
-\toprule
-	         &                                     \multicolumn{7}{c}{method}                                      \\
-	         \cmidrule{2-8}
-	         &         &         &        \multicolumn{3}{c}{alg. 3}        & \multicolumn{2}{c}{alg. 4, $\gamma = 2$} \\
-	         \cmidrule(r){4-6}\cmidrule(r){7-8}
-	$\zeta$ &     alg. 1 &   alg. 2 & $\alpha= 1.5$ & $\alpha= 2$ & $\alpha= 3$ &   $\beta = 0.1$  &   $\beta = -0.1$ \\
-\midrule
-	       0 &  8.3250 & 1.45305 &       7.5791 &    14.8517 &    20.0028 & 1.16396 &                       1.1365 \\
-	       5 &  0.6111 & 2.27126 &       6.9952 &    13.8560 &    18.6064 & 1.18659 &                       1.1630 \\
-	      10 & 11.6126 & 2.69218 &       6.2520 &    12.5202 &    16.8278 & 1.23180 &                       1.2045 \\
-	      15 &  0.5665 & 2.95046 &       5.7753 &    11.4588 &    15.4837 & 1.25131 &                       1.2614 \\
-	      20 & 15.8728 & 3.07225 &       5.3071 &    10.3935 &    13.8738 & 1.25307 &                       1.2217 \\
-	      25 &  0.9791 & 3.19034 &       5.4575 &     9.9533 &    13.0721 & 1.27104 &                       1.2640 \\
-	      30 &  2.0228 & 3.27474 &       5.7461 &     9.7164 &    12.2637 & 1.33404 &                       1.3209 \\
-	      35 & 13.4210 & 3.36086 &       6.6735 &    10.0442 &    12.0270 & 1.35385 &                       1.3059 \\
-	      40 & 13.2226 & 3.36420 &       7.7248 &    10.4495 &    12.0379 & 1.34919 &                       1.2768 \\
-	      45 & 12.8445 & 3.47436 &       8.5539 &    10.8552 &    12.2773 & 1.42303 &                       1.4362 \\
-	      50 & 12.9245 & 3.58228 &       9.2702 &    11.2183 &    12.3990 & 1.40922 &                       1.3724 \\
-\bottomrule
-\end{tabular}
-\end{table}  
+In order to test the best possible configuration options for the model, many different configurations have been tested.
+\par
+\bigskip
+Model1 - chunkSize: 20, time interval: 1 year, epochs: 5, trained on AAPL\par
+Model2 - chunkSize: 20, time interval: 1 year, epochs: 10, trained on AAPL\par
+Model3 - chunkSize: 20, time interval: 1 year, epochs: 15, trained on AAPL\par
+\par
+\bigskip
+Model4 - chunkSize: 50, time interval: 1 year, epochs: 5, trained on AAPL\par
+Model5 - chunkSize: 50, time interval: 1 year, epochs: 10, trained on AAPL\par
+Model6 - chunkSize: 50, time interval: 1 year, epochs: 15, trained on AAPL\par
+\par
+\bigskip
+Model7 - chunkSize: 100, time interval: 1 year, epochs: 5, trained on AAPL\par
+Model8 - chunkSize: 100, time interval: 1 year, epochs: 10, trained on AAPL\par
+Model9 - chunkSize: 100, time interval: 1 year, epochs: 15, trained on AAPL\par
+\par
+\bigskip
 
+\section{Different models}
+
+In order to verify that the system works correctly, the tests were performed on different inputs and parameters to obtain the most accurate results. The opening prices of shares of the largest companies on the United States stock market were used as input data. Various time periods were tested to carry out the verification reliably. The created solution predicted stock prices only for the nearest period of time, and then the obtained results were compared with actual historical data. In order to clearly illustrate the results, everything is presented on graphs.
+
+In this section, the general work of the presented neural network has been tested. Only one day in the future has been predicted here in order to visualize whether the output data looks real and probable. On the graph, many intervals predicting a single day in the future are presented and accumulated on a single graph.
+
+Firstly, the biggest tech companies were chosen as the first tested model and were trained on tech companies.
+
+Analyzing the presented graphs, a few conclusions could be drawn.
+
+
+\subsection{Model 1}
+
+Model1 - chunkSize: 20, time interval: 1 year, epochs: 5, trained on AAPL\par\bigskip
+After a quick look at the charts,  one can notice that the predicted prices are pretty close to the real prices. From this, it can be concluded that the price prediction model on the US stock market works. Further investigation may reveal which parameters work best.
+In the first model, one can see that the red line is placed quite prominently above the blue line. Moreover, some anomalies (for example, sudden sharp drops or price increases) are slightly delayed in the red line relative to the blue line. We may also notice that very rapid changes (for example, large one-day price swings) noticeable in the blue line are not visible in the red line.
+\clearpage
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model1/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model1/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model1/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model1/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model1/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model1/TSLA.png}
+\caption{Real and predicted prices of the first model.}
+\label{fig:label}
+\end{figure} 
+
+\clearpage
+\subsection{Model 2}
+
+Model2 - chunkSize: 20, time interval: 1 year, epochs: 10, trained on AAPL\par\bigskip
+In model no. 2, it can be seen that the red line corresponding to the predicted price is slightly above
+the blue line corresponding to the real price. It is worth noting that the peaks regarding the sudden
+increase in the value of shares in both variants coincide. Sudden day-to-day swings are not included
+in the red line, whether going up or down in the stock's value.
+\par
+Some anomalies, for example, sudden price spikes, are slightly delayed in the red line relative to the blue line.
+Also, swift changes, for example, one-day large price fluctuations noticeable in the blue line, are invisible
+in the red line.
+
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model2/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model2/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model2/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model2/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model2/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model2/TSLA.png}
+\caption{Real and predicted prices of the second model.}
+\label{fig:label}
+\end{figure} 
+
+\clearpage
+\subsection{Model 3}
+
+Model3 - chunkSize: 20, time interval: 1 year, epochs: 15, trained on AAPL\par\bigskip
+In the next model, at first glance, both lines almost coincide. After a careful analysis of the charts,
+however, it can be seen that in some cases, the predicted price is slightly overestimated concerning
+the real price. Some charts show that the predicted price is {\$}5 higher than the real price.
+There are also visible lags of several days between the expected and real prices. In four plots
+of this model (AAPL.png, GOOGL.png, NVDA.png, TSLA.png), it was observed that significant and
+sudden amplitudes were not included in the sine of the red line.
+
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model3/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model3/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model3/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model3/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model3/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model3/TSLA.png}
+\caption{Real and predicted prices of the third model.}
+\label{fig:label}
+\end{figure} 
+
+\clearpage
+\subsection{Model 4}
+
+Model4 - chunkSize: 50, time interval: 1 year, epochs: 5, trained on AAPL\par\bigskip
+Analyzing model 4 in terms of the convergence of the predicted price to the real price, it can be seen that in places where the amplitude swings sharply, there are discrepancies in the course of
+both lines relative to each other. In the AMZN.png and LYFT.png charts, the red line runs slightly
+ahead of the real price line and is slightly above it. In the remaining charts, there is a tendency for
+both lines to intersect in several areas. The red line shows short-term price fluctuations in minor
+detail, showing only the general direction of the downward or upward trend.
+
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model4/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model4/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model4/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model4/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model4/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model4/TSLA.png}
+\caption{Real and predicted prices of the fourth model.}
+\label{fig:label}
+\end{figure} 
+
+\clearpage
+\subsection{Model 5}
+
+Model5 - chunkSize: 50, time interval: 1 year, epochs: 10, trained on AAPL\par\bigskip
+In this model, the lines showing the real price fluctuations and the price expected on the
+market coincide in many areas. They show a systematic upward trend and a systematic decrease in
+prices. However, it should be noted that sudden deflections were not depicted here by the course of
+the red line. The red line does not reach its apogee if the deflection amplitude is large and sudden.
+
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model5/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model5/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model5/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model5/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model5/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model5/TSLA.png}
+\caption{Real and predicted prices of the fifth model.}
+\label{fig:label}
+\end{figure} 
+
+\clearpage
+\subsection{Model 6}
+
+Model6 - chunkSize: 50, time interval: 1 year, epochs: 15, trained on AAPL\par\bigskip
+Observing the deflections of the line in model 6, it can be observed that the course of both lines does
+not always coincide over their entire course. Analyzing the path of the red line, it can be seen that it
+runs above the blue line. Given the horizontal shift, it runs to the right of the blue line. When
+considering situations where prices go up or down systematically, both lines coincide, which is worth
+noting. On the other hand, sudden price drops shown in the blue line are not reflected in the course
+of the red line. This situation is most marked in the graph for AAPL.png., and GOOGL.png.
+
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model6/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model6/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model6/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model6/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model6/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model6/TSLA.png}
+\caption{Real and predicted prices of the sixth model.}
+\label{fig:label}
+\end{figure} 
+
+\clearpage
+\subsection{Model 7}
+
+Model7 - chunkSize: 100, time interval: 1 year, epochs: 5, trained on AAPL\par\bigskip
+In this model, when observing and analyzing the course of both lines, the first thing that can be
+noticed is that the red line is too smooth concerning the blue line. The blue line has strongly
+peaked peaks, while the red line is visibly smooth throughout its course. Only a mild increase or
+decrease in prices is signaled. In this model, short-term price fluctuations were not marked on the
+charts. Few-day discounts or increases are not reflected in the red line. Sudden, rapid
+changes are not included in this model. In addition, the red line is significantly shifted to the right and
+runs higher than the blue line for its entire length.
+
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model7/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model7/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model7/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model7/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model7/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model7/TSLA.png}
+\caption{Real and predicted prices of the seventh model.}
+\label{fig:label}
+\end{figure} 
+
+\clearpage
+\subsection{Model 8}
+
+Model8 - chunkSize: 100, time interval: 1 year, epochs: 10, trained on AAPL\par\bigskip
+In the graphs of this model, one can observe the shift of the red line upwards relative to the blue line.
+The general route of the two lines does not coincide, however, it reflects the general tendency to
+increase or decrease prices. Rapid price drops are signaled by a blue line, for example, in the chart for AAPL.png.,
+and GOOGL.png. they are not reflected in the course of the blue line. The same is true in two cases of
+a sudden one-day price increase, as in the charts for GOOGL.png., and NVDA.png.,
+however, in these cases, the blue line peaks do not go much above the red line. In addition, the red
+line has a much more gentle course compared to the blue line, and it is flattened in places with very rapid price changes. What is worth noticing, the long-term systematic progression of
+prices is precisely marked, and both lines have an almost identical course.
+
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model8/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model8/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model8/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model8/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model8/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model8/TSLA.png}
+\caption{Real and predicted prices of the eighth model.}
+\label{fig:label}
+\end{figure} 
+
+\clearpage
+\subsection{Model 9}
+
+Model9 - chunkSize: 100, time interval: 1 year, epochs: 15, trained on AAPL\par\bigskip
+In this model, both lines have a very similar course in terms of deflection up or to the side. The lines
+in the aged places of the charts coincide with each other. One can also see places on the charts
+where the lines intersect, but the general trend in the course of the lines shows a consistent picture
+of predicting market prices. The longer-lasting, consistent increase in market prices is very well
+illustrated in the chart for NVDA.png., GOOGL.png, AAPL.png, and TSLA.png. On the other hand,
+sharp one-day price drops reflected in sharply deflected down peaks, for example, TSLA.png or AAPL.png
+do not translate into the course of the blue line.
+
+\begin{figure}
+% \centering
+\includegraphics[width=0.5\textwidth]{./graf/model9/AAPL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model9/AMZN.png}
+\includegraphics[width=0.5\textwidth]{./graf/model9/GOOGL.png}
+\includegraphics[width=0.5\textwidth]{./graf/model9/LYFT.png}
+\includegraphics[width=0.5\textwidth]{./graf/model9/NVDA.png}
+\includegraphics[width=0.5\textwidth]{./graf/model9/TSLA.png}
+\caption{Real and predicted prices of the nineth model.}
+\label{fig:label}
+\end{figure} 

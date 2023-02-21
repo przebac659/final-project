@@ -8,20 +8,31 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Libraries used for this project.\relax }}{10}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Libraries used for this project.\relax }}{10}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Figure caption (below the figure).\relax }}{11}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Main window of stock price prediction project.\relax }}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Neural network's parameters.\relax }}{13}{figure.caption.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Variables.\relax }}{14}{figure.caption.17}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Working with the stock market data.\relax }}{15}{figure.caption.18}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Reshaping data.\relax }}{16}{figure.caption.19}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Neural network model.\relax }}{17}{figure.caption.20}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Adam compiler.\relax }}{18}{figure.caption.21}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Presenting obtained data on the graphs.\relax }}{19}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Presenting obtained data on the graphs.\relax }}{20}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Presenting obtained data on the graphs.\relax }}{21}{figure.caption.24}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Method responsible for changing the displayed graphs.\relax }}{22}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Variables.\relax }}{16}{figure.caption.11}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Working with the stock market data.\relax }}{17}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Reshaping data.\relax }}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Neural network model.\relax }}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Adam compiler.\relax }}{20}{figure.caption.15}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Presenting obtained data on the graphs.\relax }}{21}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Presenting obtained data on the graphs.\relax }}{22}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Presenting obtained data on the graphs.\relax }}{23}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Method responsible for changing the displayed graphs.\relax }}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces UML class diagram.\relax }}{25}{figure.caption.20}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Real and predicted prices of the first model.\relax }}{29}{figure.caption.21}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Real and predicted prices of the second model.\relax }}{31}{figure.caption.22}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Real and predicted prices of the third model.\relax }}{33}{figure.caption.23}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Real and predicted prices of the fourth model.\relax }}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Real and predicted prices of the fifth model.\relax }}{37}{figure.caption.25}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Real and predicted prices of the sixth model.\relax }}{39}{figure.caption.26}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Real and predicted prices of the seventh model.\relax }}{41}{figure.caption.27}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Real and predicted prices of the eighth model.\relax }}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Real and predicted prices of the nineth model.\relax }}{45}{figure.caption.29}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

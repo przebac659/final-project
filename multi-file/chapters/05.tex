@@ -11,7 +11,7 @@
 \item UML diagrams
 \end{itemize}
 
-\section*{Documentation}
+\section{Documentation}
 
 This section consists of variables that are used later in the project. By changing these values, modification of the application is possible. All variables that matter are stored here. company{\_}name and price{\_}type are used in reading data from Yahoo Finance. In company{\_}name, the NASDAQ (National Association of Securities Dealers Automated Quotations) ticker symbol should be imputed so that the appropriate company data could be read. The ticker symbol is an abbreviation of the company name used in NASDAQ to associate a particular company with its data. In price{\_}type, the type of price that should be read should be specified from open price (open), closing price (close), the highest price of the given period of time (high), lowest price of the given period of time (low) or the volume traded (volume).
 
@@ -212,45 +212,12 @@ This method checks which company is chosen and changes what QPixmap displays acc
 \label{fig:pseudocode:listings}
 \end{figure}
 
-\section*{UML diagram}
+\section{UML diagram}
 This UML diagram has been generated automatically and represents the classes used in the presented project. These classes are not associated with one another. The MainWindow class inherits from QMainWindow class, which is part of a PyQt framework.
-+---------------------------------------+
-|               Variables               |
-+---------------------------------------+
-| - price{\_}type: str                     |
-| - epochs: int                         |
-| - startDate: str                      |
-| - endDate: str                        |
-| - interval: str                       |
-| - chunkSize: int                      |
-| - company{\_}name: list[str]             |
-+---------------------------------------+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{./graf/UML.png}
 
-
-+---------------------------------------+
-|            NeuralNetwork              |
-+---------------------------------------+
-| - model: Sequential                   |
-+---------------------------------------+
-| + build{\_}model(data{\_}prediction)        |
-| + evaluate{\_}model(data{\_}prediction,     |
-|                  data{\_}result)         |
-| + save{\_}model(name)                    |
-| + load{\_}model(name)                    |
-| + predict{\_}prices(data{\_}prediction)     |
-+---------------------------------------+
-
-
-+---------------------------------------+
-|             MainWindow                |
-+---------------------------------------+
-| - predict{\_}button: QPushButton         |
-| - image: QPixmap                      |
-| - label{\_}plot: QLabel                  |
-| - select{\_}mode: QComboBox              |
-+---------------------------------------+
-| + start()                             |
-| + setup{\_}ui()                          |
-| + predict{\_}button{\_}click()              |
-| {\_}createMenuBar()                      |
-+---------------------------------------+
+  \caption{UML class diagram.}
+  \label{fig:label}
+  \end{figure} 

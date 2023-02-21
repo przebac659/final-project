@@ -11,33 +11,41 @@
 \item working scenarios (with screenshots or output files)
 \end{itemize}
 
-
+After running the presented program, the end user will see a window with a graph and a list from which it is possible to choose the company the user would like to investigate. There is a graph presented in the main window that consists of two lines - red and blue. The blue line represents real prices that can be read from the stock market, and the red line represents the predicted prices provided by the neural network. At the bottom of the screen, there is a list of companies. By changing the company on the list, the graph will change accordingly.
+Changing the options for the neural network in variables.py file is possible. All the variables used in the project can be changed as the end user wants. The things that could be changed are the type of the reading price (can be open price, closing price, the highest price, the lowest price or volume of the stocks traded), the number of epochs in training the neural network, start date, end date, and the interval (can be daily, weekly or monthly), and size of the input data.
+It is also possible to load the neural network model instead of training a new one by uncommenting the load model function in hortus.py and placing one of the eight models' names in it.
 
  
 \begin{figure}
 \centering
-\begin{tikzpicture}
-\begin{axis}[
-    y tick label style={
-        /pgf/number format/.cd,
-            fixed,    
-            fixed zerofill, % 1.0 zamiast 1
-            precision=1,
-        /tikz/.cd
-    },
-    x tick label style={
-        /pgf/number format/.cd,
-            fixed,
-            fixed zerofill,
-            precision=2,
-        /tikz/.cd
-    }
-]
-\addplot [domain=0.0:0.1] {rnd};
-\end{axis} 
-\end{tikzpicture}
-\caption{Figure caption (below the figure).}
-\label{fig:2}
+\includegraphics[width=0.5\textwidth]{./graf/MainWindow.png}
+\includegraphics[width=0.5\textwidth]{./graf/MainWindow_select.png}
+\caption{Main window of stock price prediction project.}
+\label{fig:label}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+    # Variables
+    # company_name = 'AAPL' # company NASDAQ name
+    price_type = 'open' # open, close, high, low, volume
+    epochs = 15
+
+    # Time interval
+    startDate = '2021-06-01'
+    endDate = '2022-06-01'
+    interval = 'daily' # daily, weekly or monthly
+
+    # Shape of input data
+    chunkSize = 100
+
+    # Company name dict
+    company_name = ['AAPL', 'AMZN', 'GOOGL', 'LYFT', 'NVDA', 'TSLA']
+\end{lstlisting}
+\caption{Neural network's parameters.}
+\label{fig:pseudocode:listings}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%

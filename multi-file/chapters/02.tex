@@ -1,7 +1,7 @@
-\chapter{[Problem analysis]}
+\chapter{Problem analysis}
 
-\section*{What is AI and what can it be used for}
-As the Cambridge Dictionary states, Artificial Intelligence is “the study of how to produce machines that have some of the qualities that the human mind has, such as the ability to understand language, recognize pictures, solve problems, and learn”. It can be concluded that Artificial Intelligence is a field of science whose goal is to replace the work of humans with machines.
+\section{What is AI and what can it be used for}
+As the Cambridge Dictionary states, Artificial Intelligence is “the study of how to produce machines that have some of the qualities that the human mind has, such as the ability to understand language, recognize pictures, solve problems, and learn”\cite{bib:cambridge}. It can be concluded that Artificial Intelligence is a field of science whose goal is to replace the work of humans with machines.
 AI is used for a wide variety of tasks and applications. Some examples include:
 \begin{itemize}
     \item Image and speech recognition: AI algorithms can be trained to identify objects, people, or words in images or audio recordings.
@@ -14,7 +14,7 @@ AI is used for a wide variety of tasks and applications. Some examples include:
 \end{itemize} 
 These are just a few examples of the many ways AI is being used today, and as the technology continues to advance, it is likely to be used in an even wider range of applications in the future.
 
-\section*{AI in stock prediction}
+\section{AI in stock prediction}
 Since the beginning of Artificial Intelligence, people have wanted to use it for profit. The concept of a program that would be able to predict the future of the stock market is an idea that inspires many engineers to act. This is an unachievable goal, but AI is constantly evolving thanks to this challenge.
 
 Predicting stock prices is a challenging task that has been the subject of much research in AI and machine learning. Various neural network architectures have been used for this task, and the choice of architecture will depend on the specific characteristics of the data and the problem at hand.
@@ -28,17 +28,19 @@ Some popular architectures that have been used for stock price prediction includ
 It is worth noting that stock price prediction is a complex problem, and only some models would work best for some scenarios. Many other variables, such as news, announcements, market sentiments, and trends, also need to be taken into account and can be incorporated into the model using techniques like Sentiment Analysis and Named Entity Recognition.
 It is also important to mention that stock prices are highly dynamic and non-linear, making it difficult to predict with high accuracy, and multiple models with different architectures may need to be combined to produce an accurate prediction.
 \par
+\bigskip
 For this project, LSTM model have been chosen to predict the stock prices. 
 One of the main reasons why LSTMs may be well-suited for stock price prediction is their ability to maintain a long-term memory of the inputs they have seen. Stock prices are a type of time series data, which means that the current price of a stock is likely to be influenced by a long sequence of previous prices and other related financial data, such as trading volume and market sentiment. Because LSTMs can maintain a long-term memory of the inputs they have seen, they can understand patterns or dependencies in the data that may span multiple time steps, making them well-suited to analyze historical price data and make predictions about future price movements.
 Another reason LSTMs may be well-suited for stock price prediction is that they can handle input data with high dimensionality and noise. Stock prices are influenced by various factors, such as economic indicators, company news, and global events, which can be challenging to quantify or predict. LSTMs are able to handle input data with high dimensionality and high noise, making them well-suited to analyze a wide range of financial data and make predictions about future price movements.
 Stock price prediction is a complicated problem and no single model would work best for every scenario. LSTM might work well on one dataset and not on another. Also, LSTMs alone might not be enough to accurately predict stock prices, and other techniques such as Sentiment Analysis and Named Entity Recognition, as well as other variables such as news, announcements, market sentiments and trends, may need to be taken into account and can be incorporated into the model.
 \par
+\bigskip
 LSTM stands for Long Short-Term Memory. It is a type of Recurrent Neural Network (RNN) architecture that is used to process sequential data, such as time series or natural language.
 An RNN processes input data one step at a time, maintaining an internal "memory" of the inputs it has seen. This allows the network to understand patterns or dependencies in the data that may span multiple time steps. However, the simple RNN architecture has a problem known as the "vanishing gradients" problem, where the gradients of the error concerning the parameters of the network become very small as they are backpropagated through multiple time steps.
 By introducing a number of "gates" that regulate the movement of data into and out of the network's memory, LSTM finds a solution to this issue. These gates can be thought of as "switches" that turn the flow of information on and off, allowing the network to maintain a much longer-term memory of the inputs it has seen.
 The LSTM architecture is used in various sequential data processing tasks, such as natural language processing, speech recognition, and time series prediction. LSTM is particularly well-suited to tasks where the output depends on a long sequence of prior inputs, such as in natural language processing or stock price prediction, as the output depends on many data
 
-\section*{Prediction of the stock market}
+\section{Prediction of the stock market}
 Stock prices can be predicted using a combination of methods, including technical analysis, fundamental analysis, quantitative analysis, and news analysis.
 
 \begin{itemize}

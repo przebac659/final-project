@@ -84,17 +84,17 @@ class MainWindow(QMainWindow):
         helpMenu = menuBar.addMenu("&Help")
 
         # File menu
-        action_open = QAction("Open", self)
-        action_open.triggered.connect(self.open_click)
-        action_exit = QAction("Exit", self)
-        action_exit.triggered.connect(self.exit_click)
-        fileMenu.addAction(action_open)
-        fileMenu.addAction(action_exit)
+        # action_open = QAction("Open", self)
+        # action_open.triggered.connect(self.open_click)
+        # action_exit = QAction("Exit", self)
+        # action_exit.triggered.connect(self.exit_click)
+        # fileMenu.addAction(action_open)
+        # fileMenu.addAction(action_exit)
 
-        # Help menu
-        action_help = QAction("Help", self)
-        action_help.triggered.connect(self.help_click)
-        helpMenu.addAction(action_help)
+        # # Help menu
+        # action_help = QAction("Help", self)
+        # action_help.triggered.connect(self.help_click)
+        # helpMenu.addAction(action_help)
 
     """Methods responsible for handling interaction with buttons etc."""
 
