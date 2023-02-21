@@ -79,3 +79,178 @@ In order to train the model, the gathered data should be reshaped so that they h
 \caption{Reshaping data.}
 \label{fig:pseudocode:listings}
 \end{figure}
+
+As it was stated before in this paper, the chosen type of model for this project is the Sequential model, as it was proven to work best for such solutions in different papers. In this project, several combinations of different layers have been considered, and finally, the layers presented below have been added to the model.
+\par
+
+LSTM -> Dropout -> LSTM -> Dropout -> Dense
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+  model = Sequential()
+  model.add(LSTM(50, return_sequences=True, input_shape=(data_prediction.shape[1], 1)))
+  model.add(Dropout(0.2))
+  model.add(LSTM(50, return_sequences=False))
+  model.add(Dropout(0.2))
+  model.add(Dense(1))
+\end{lstlisting}
+\caption{Neural network model.}
+\label{fig:pseudocode:listings}
+\end{figure}
+
+The model has been compiled using the ‘adam’ optimizer, and for loss, ‘mean squared error’ has been used.
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+  model.compile(optimizer='adam',
+  loss='mean_squared_error')
+\end{lstlisting}
+\caption{Adam compiler.}
+\label{fig:pseudocode:listings}
+\end{figure}
+
+PyPlot has been used for plotting the result for testing purposes as it provides very clear and easy-to-read graphs. In order to verify how this model can predict future prices, the two graphs have been combined - the one with the actual prices (blue) and the one with the predicted prices (red). Before printing the results, the predicted future prices are put through the min-max scaler to transform them back into real values.
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+  # print(data_result)
+  data_result = minmax_scale(data_result, feature_range=(0,highest_price))
+  future_price = minmax_scale(future_price, feature_range=(0,highest_price))
+  plt.plot(future_price, 'r', data_result, 'b')
+  # plt.title(("Real and predicted price of " + company_name + " stock"))
+  plt.title(("Real and predicted price of "+Variables.company_name[company_enum]+" stock"))
+  plt.xlabel('Time [days]')
+  plt.ylabel('Price [{\$}]')
+  plt.legend(['Predicted price', 'Real price'])
+  # plt.figure(dpi=300)
+  # plt.plot(data_result)
+  # plt.show()
+  plt.savefig('plots/'+Variables.company_name[company_enum])
+  plt.clf()
+\end{lstlisting}
+\caption{Presenting obtained data on the graphs.}
+\label{fig:pseudocode:listings}
+\end{figure}
+
+The layouts have been used to manage the graphical interface efficiently and allow future developers to upgrade the application easily. There are easier and probably even more convenient ways of setting up a GUI for quite a small application, but this approach is recommended and provides a more transparent code. The main window is divided into two areas -  upper and lower panels. The upper panel will consist of a graph of the stock prices. The lower panel will have a list of companies whose stocks could be presented on the graph.
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+  layout = QGridLayout()
+  upper_panel = QHBoxLayout()
+  lower_panel = QHBoxLayout()
+  layout.addLayout(upper_panel, 0, 0)
+  layout.addLayout(lower_panel, 1, 0)
+\end{lstlisting}
+\caption{Presenting obtained data on the graphs.}
+\label{fig:pseudocode:listings}
+\end{figure}
+
+In order to easily show and change pictures, a QPixmap with QLabel has been used.
+This QLabel has been set to be scalable. To change pictures, a list of companies has been provided using QComboBox. All the companies assigned to variable company{\_}name have been added to the list. Then the event of changing the company in the list has been assigned to a method named update{\_}image.
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+  # ******** Image *********
+
+
+  self.image = QPixmap("plots/AAPL.png")
+  self.label_plot = QLabel()
+  self.label_plot.setPixmap(self.image)
+  self.label_plot.setScaledContents(True)
+
+
+  # ****** Menu ******
+
+
+  self.select_mode = QComboBox()
+  for v in Variables.company_name:
+      self.select_mode.addItem(v)
+  self.select_mode.currentIndexChanged.connect(self.update_image)
+
+\end{lstlisting}
+\caption{Presenting obtained data on the graphs.}
+\label{fig:pseudocode:listings}
+\end{figure}
+
+This method checks which company is chosen and changes what QPixmap displays accordingly.
+\clearpage
+\begin{figure}
+\centering
+\begin{lstlisting}
+  def update_image(self, index):
+  # get the text of the selected item
+  selected_item_text = self.select_mode.currentText()
+
+
+  # load the corresponding image and set it to the QLabel
+  if selected_item_text == Variables.company_name[0]:
+      pixmap = QPixmap('plots/' + Variables.company_name[0] + '.png')
+      self.label_plot.setPixmap(pixmap)
+  elif selected_item_text == Variables.company_name[1]:
+      pixmap = QPixmap('plots/' + Variables.company_name[1] + '.png')
+      self.label_plot.setPixmap(pixmap)
+  elif selected_item_text == Variables.company_name[2]:
+      pixmap = QPixmap('plots/' + Variables.company_name[2] + '.png')
+      self.label_plot.setPixmap(pixmap)
+  elif selected_item_text == Variables.company_name[3]:
+      pixmap = QPixmap('plots/' + Variables.company_name[3] + '.png')
+      self.label_plot.setPixmap(pixmap)
+  elif selected_item_text == Variables.company_name[4]:
+      pixmap = QPixmap('plots/' + Variables.company_name[4] + '.png')
+      self.label_plot.setPixmap(pixmap)
+  elif selected_item_text == Variables.company_name[5]:
+      pixmap = QPixmap('plots/' + Variables.company_name[5] + '.png')
+      self.label_plot.setPixmap(pixmap)
+\end{lstlisting}
+\caption{Method responsible for changing the displayed graphs.}
+\label{fig:pseudocode:listings}
+\end{figure}
+
+\section*{UML diagram}
+This UML diagram has been generated automatically and represents the classes used in the presented project. These classes are not associated with one another. The MainWindow class inherits from QMainWindow class, which is part of a PyQt framework.
++---------------------------------------+
+|               Variables               |
++---------------------------------------+
+| - price{\_}type: str                     |
+| - epochs: int                         |
+| - startDate: str                      |
+| - endDate: str                        |
+| - interval: str                       |
+| - chunkSize: int                      |
+| - company{\_}name: list[str]             |
++---------------------------------------+
+
+
++---------------------------------------+
+|            NeuralNetwork              |
++---------------------------------------+
+| - model: Sequential                   |
++---------------------------------------+
+| + build{\_}model(data{\_}prediction)        |
+| + evaluate{\_}model(data{\_}prediction,     |
+|                  data{\_}result)         |
+| + save{\_}model(name)                    |
+| + load{\_}model(name)                    |
+| + predict{\_}prices(data{\_}prediction)     |
++---------------------------------------+
+
+
++---------------------------------------+
+|             MainWindow                |
++---------------------------------------+
+| - predict{\_}button: QPushButton         |
+| - image: QPixmap                      |
+| - label{\_}plot: QLabel                  |
+| - select{\_}mode: QComboBox              |
++---------------------------------------+
+| + start()                             |
+| + setup{\_}ui()                          |
+| + predict{\_}button{\_}click()              |
+| {\_}createMenuBar()                      |
++---------------------------------------+
