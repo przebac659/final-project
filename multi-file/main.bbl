@@ -1,0 +1,296 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{bib:cambridge}{online}{}
+    \name{author}{1}{}{%
+      {{hash=CUP}{%
+         family={2023},
+         familyi={\bibinitperiod},
+         given={Cambridge University\bibnamedelima Press},
+         giveni={C\bibinitperiod\bibinitdelim U\bibinitperiod\bibinitdelim
+  P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CUP1}
+    \strng{fullhash}{CUP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{title}{ARTIFICIAL INTELLIGENCE - Cambridge English Dictionary}
+    \verb{url}
+    \verb https://dictionary.cambridge.org/dictionary/english/artificial-intell
+    \verb igence
+    \endverb
+    \field{year}{2023}
+    \field{urlday}{15}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{bib:newsAnalysis}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AEKNYS}{%
+         family={Ayman E.\bibnamedelima Khedr},
+         familyi={A\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  K\bibinitperiod},
+         suffix={S.E.Salama},
+         suffixi={S\bibinitperiod},
+         given={Nagwa\bibnamedelima Yaseen},
+         giveni={N\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AEKSNY1}
+    \strng{fullhash}{AEKSNY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{22\bibrangedash 30}
+    \field{title}{Predicting Stock Market Behavior using Data Mining Technique
+  and News Sentiment Analysis}
+    \field{journaltitle}{I.J. Intelligent Systems and Applications}
+    \field{year}{2017}
+  \endentry
+
+  \entry{bib:keras}{online}{}
+    \name{author}{1}{}{%
+      {{hash=CF}{%
+         family={Chollet},
+         familyi={C\bibinitperiod},
+         given={François},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CF1}
+    \strng{fullhash}{CF1}
+    \field{labelnamesource}{author}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{url}
+    \verb https://keras.io/
+    \endverb
+  \endentry
+
+  \entry{bib:quantitativeAnalysis}{article}{}
+    \name{author}{1}{}{%
+      {{hash=DCJFED}{%
+         family={David\bibnamedelima Chambers},
+         familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+         suffix={Elroy\bibnamedelima Dimson},
+         suffixi={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+         given={Justin\bibnamedelima Foo},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DCEDJF1}
+    \strng{fullhash}{DCEDJF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{843\bibrangedash 868}
+    \field{title}{Keynes the Stock Market Investor: A Quantitative Analysis}
+    \field{volume}{50}
+    \field{journaltitle}{Journal of Financial and Quantitative Analysis}
+    \field{year}{2015}
+  \endentry
+
+  \entry{bib:python}{online}{}
+    \name{author}{1}{}{%
+      {{hash=FPS}{%
+         family={Foundation},
+         familyi={F\bibinitperiod},
+         given={Python\bibnamedelima Software},
+         giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FPS1}
+    \strng{fullhash}{FPS1}
+    \field{labelnamesource}{author}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{url}
+    \verb https://www.python.org/
+    \endverb
+  \endentry
+
+  \entry{bib:techFundamentalAnalysis}{article}{}
+    \name{author}{1}{}{%
+      {{hash=IKNBAWAFA}{%
+         family={Isaac Kofi\bibnamedelima Nti},
+         familyi={I\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim
+  N\bibinitperiod},
+         suffix={Adebayo Felix\bibnamedelima Adekoya},
+         suffixi={A\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+         given={Benjamin Asubam\bibnamedelima Weyori},
+         giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{IKNAFABAW1}
+    \strng{fullhash}{IKNAFABAW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{pages}{3007\bibrangedash 3057}
+    \field{title}{A systematic review of fundamental and technical analysis of
+  stock market predictions}
+    \field{volume}{53}
+    \field{journaltitle}{Artif Intell Rev}
+    \field{year}{2020}
+  \endentry
+
+  \entry{bib:LSTM-prediction}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=KCFDYZ}{%
+         family={Kai\bibnamedelima Chen},
+         familyi={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+         suffix={Yi\bibnamedelima Zhou},
+         suffixi={Y\bibinitperiod\bibinitdelim Z\bibinitperiod},
+         given={Fangyan\bibnamedelima Dai},
+         giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KCYZFD1}
+    \strng{fullhash}{KCYZFD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{IEEE International Conference on Big Data}
+    \field{pages}{2823\bibrangedash 2824}
+    \field{title}{A LSTM-based method for stock returns prediction: A case
+  study of China stock market}
+    \field{year}{2015}
+  \endentry
+
+  \entry{bib:whatIsAI}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MJ}{%
+         family={McCarthy},
+         familyi={M\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJ1}
+    \strng{fullhash}{MJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{8\bibrangedash 11}
+    \field{title}{WHAT IS ARTIFICIAL INTELLIGENCE?}
+    \field{journaltitle}{Computer Science Department, Stanford University}
+    \field{year}{2004}
+  \endentry
+
+  \entry{bib:NNtypes}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=SSEAGRV}{%
+         family={Sreelekshmy\bibnamedelima Selvin},
+         familyi={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+         suffix={R\bibnamedelima Vinayakumar},
+         suffixi={R\bibinitperiod\bibinitdelim V\bibinitperiod},
+         given={E.\bibnamedelima A\bibnamedelima Gopalakrishnan},
+         giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+      }}%
+      {{hash=MVK}{%
+         family={Menon},
+         familyi={M\bibinitperiod},
+         given={Vijay\bibnamedelima Krishna},
+         giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=SKP}{%
+         family={Soman},
+         familyi={S\bibinitperiod},
+         given={K.\bibnamedelima P.},
+         giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SSRVEAGMVKSKP1}
+    \strng{fullhash}{SSRVEAGMVKSKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{International Conference on Advances in Computing,
+  Communications and Informatics (ICACCI)}
+    \field{pages}{1643\bibrangedash 1647}
+    \field{title}{Stock price prediction using LSTM, RNN and CNN-sliding window
+  model}
+    \field{year}{2017}
+  \endentry
+
+  \entry{bib:GRU-prediction}{article}{}
+    \name{author}{1}{}{%
+      {{hash=UGPSBVB}{%
+         family={Umang\bibnamedelima Gupta},
+         familyi={U\bibinitperiod\bibinitdelim G\bibinitperiod},
+         suffix={Vandana\bibnamedelima Bhattacharjee},
+         suffixi={V\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={Partha Sarathi\bibnamedelima Bishnu},
+         giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{UGVBPSB1}
+    \strng{fullhash}{UGVBPSB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{U}
+    \field{sortinithash}{U}
+    \field{title}{StockNet—GRU based stock index prediction}
+    \field{volume}{207}
+    \field{journaltitle}{Expert Systems with Applications}
+    \field{year}{202}
+  \endentry
+
+  \entry{bib:technicalAnalysis}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WKWBKCMM}{%
+         family={Wing-Keung\bibnamedelima Wong},
+         familyi={W\bibinithyphendelim K\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+         suffix={Meher\bibnamedelima Manzur},
+         suffixi={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Boon-Kiat\bibnamedelima Chew},
+         giveni={B\bibinithyphendelim K\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WKWMMBKC1}
+    \strng{fullhash}{WKWMMBKC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{pages}{543\bibrangedash 551}
+    \field{title}{How rewarding is technical analysis? Evidence from Singapore
+  stock market}
+    \field{volume}{13}
+    \field{journaltitle}{Applied Financial Economics}
+    \field{year}{2003}
+  \endentry
+\enddatalist
+\endinput

@@ -29,10 +29,10 @@
 \contentsline {subsection}{\numberline {6.1.7}Model 7}{40}{subsection.6.1.7}%
 \contentsline {subsection}{\numberline {6.1.8}Model 8}{42}{subsection.6.1.8}%
 \contentsline {subsection}{\numberline {6.1.9}Model 9}{44}{subsection.6.1.9}%
-\contentsline {chapter}{\numberline {7}Conclusions}{47}{chapter.7}%
-\contentsline {chapter}{Bibliography}{49}{chapter.7}%
-\contentsline {chapter}{Index of abbreviations and symbols}{51}{appendix*.30}%
-\contentsline {chapter}{Listings}{53}{appendix*.31}%
-\contentsline {chapter}{List of additional files in~electronic submission (if applicable)}{55}{appendix*.32}%
-\contentsline {chapter}{List of figures}{57}{appendix*.33}%
-\contentsline {chapter}{List of tables}{59}{appendix*.34}%
+\contentsline {subsection}{\numberline {6.1.10}Comparison of models 1-9}{46}{subsection.6.1.10}%
+\contentsline {chapter}{\numberline {7}Conclusions}{49}{chapter.7}%
+\contentsline {chapter}{Bibliography}{51}{chapter*.31}%
+\contentsline {chapter}{Index of abbreviations and symbols}{55}{appendix*.32}%
+\contentsline {chapter}{List of additional files in~electronic submission (if applicable)}{57}{appendix*.33}%
+\contentsline {chapter}{List of figures}{59}{appendix*.34}%
+\contentsline {chapter}{List of tables}{61}{appendix*.35}%

@@ -1,12 +1,7 @@
 \chapter{Verification and validation}
-\begin{itemize}
-\item testing paradigm (eg V model)
-\item test cases, testing scope (full / partial)
-\item detected and fixed bugs
-\item results of experiments (optional)
-\end{itemize}
 
 In order to test the best possible configuration options for the model, many different configurations have been tested.
+
 \par
 \bigskip
 Model1 - chunkSize: 20, time interval: 1 year, epochs: 5, trained on AAPL\par
@@ -35,12 +30,24 @@ Firstly, the biggest tech companies were chosen as the first tested model and we
 
 Analyzing the presented graphs, a few conclusions could be drawn.
 
+To check the accuracy of a given model, the evaluate() method from the Keras framework was used. This method returns the loss for a given model. The smaller this value, the more accurate the model. The measurement error was also measured using the root-mean-square error. This method of checking measurement error was used because it penalizes more significant errors and is more sensitive to deviations from the norm, and when predicting one day ahead, this test will give the best results.
+Root-mean-square error formula:
+\[ RMSE = \sqrt(\sum\limits_{i=1}^N (\frac{predicted{\_}price_n - real{\_}price_n}{n})^2) \]
 
 \subsection{Model 1}
 
 Model1 - chunkSize: 20, time interval: 1 year, epochs: 5, trained on AAPL\par\bigskip
 After a quick look at the charts,  one can notice that the predicted prices are pretty close to the real prices. From this, it can be concluded that the price prediction model on the US stock market works. Further investigation may reveal which parameters work best.
 In the first model, one can see that the red line is placed quite prominently above the blue line. Moreover, some anomalies (for example, sudden sharp drops or price increases) are slightly delayed in the red line relative to the blue line. We may also notice that very rapid changes (for example, large one-day price swings) noticeable in the blue line are not visible in the red line.
+\par\bigskip
+loss: 0.007714093662798405\par
+RMSE for AAPL equals 10.514971691122051\par
+RMSE for AMZN equals 1.999737685079056\par
+RMSE for GOOGL equals 4.94055902209801\par
+RMSE for LYFT equals 2.1228890174235002\par
+RMSE for NVDA equals 4.154158643611122\par
+RMSE for TSLA equals 0.3021274153721524\par
+
 \clearpage
 \begin{figure}
 % \centering
@@ -66,6 +73,15 @@ in the red line, whether going up or down in the stock's value.
 Some anomalies, for example, sudden price spikes, are slightly delayed in the red line relative to the blue line.
 Also, swift changes, for example, one-day large price fluctuations noticeable in the blue line, are invisible
 in the red line.
+\par\bigskip
+loss: 0.008151059038937092\par
+RMSE for AAPL equals 8.905762534366307\par
+RMSE for AMZN equals 1.131803692397224\par
+RMSE for GOOGL equals 6.083272264661717\par
+RMSE for LYFT equals 2.0450747531362916\par
+RMSE for NVDA equals 4.728504024706614\par
+RMSE for TSLA equals 1.177903746100564\par
+
 
 \begin{figure}
 % \centering
@@ -89,6 +105,15 @@ the real price. Some charts show that the predicted price is {\$}5 higher than t
 There are also visible lags of several days between the expected and real prices. In four plots
 of this model (AAPL.png, GOOGL.png, NVDA.png, TSLA.png), it was observed that significant and
 sudden amplitudes were not included in the sine of the red line.
+\par\bigskip
+loss: 0.0052094003185629845\par
+RMSE for AAPL equals 10.383642993259755\par
+RMSE for AMZN equals 2.185266997776006\par
+RMSE for GOOGL equals 7.797997029403418\par
+RMSE for LYFT equals 2.3010552912763744\par
+RMSE for NVDA equals 6.124846943497234\par
+RMSE for TSLA equals 1.1923880490956362\par
+
 
 \begin{figure}
 % \centering
@@ -111,6 +136,15 @@ both lines relative to each other. In the AMZN.png and LYFT.png charts, the red 
 ahead of the real price line and is slightly above it. In the remaining charts, there is a tendency for
 both lines to intersect in several areas. The red line shows short-term price fluctuations in minor
 detail, showing only the general direction of the downward or upward trend.
+\par\bigskip
+loss: 0.009654750116169453\par
+RMSE for AAPL equals 8.90622068107363\par
+RMSE for AMZN equals 7.511405804149795\par
+RMSE for GOOGL equals 5.3093154596807794\par
+RMSE for LYFT equals 1.9880919617118793\par
+RMSE for NVDA equals 6.67375019766115\par
+RMSE for TSLA equals 0.586036519909922\par
+
 
 \begin{figure}
 % \centering
@@ -132,6 +166,14 @@ In this model, the lines showing the real price fluctuations and the price expec
 market coincide in many areas. They show a systematic upward trend and a systematic decrease in
 prices. However, it should be noted that sudden deflections were not depicted here by the course of
 the red line. The red line does not reach its apogee if the deflection amplitude is large and sudden.
+\par\bigskip
+loss: 0.0076959822326898575\par
+RMSE for AAPL equals 8.451018847518613\par
+RMSE for AMZN equals 6.3281257280190095\par
+RMSE for GOOGL equals 7.812833760162142\par
+RMSE for LYFT equals 1.5628933553765902\par
+RMSE for NVDA equals 6.9396920771979955\par
+RMSE for TSLA equals 2.5031877336406927\par
 
 \begin{figure}
 % \centering
@@ -155,6 +197,14 @@ runs above the blue line. Given the horizontal shift, it runs to the right of th
 considering situations where prices go up or down systematically, both lines coincide, which is worth
 noting. On the other hand, sudden price drops shown in the blue line are not reflected in the course
 of the red line. This situation is most marked in the graph for AAPL.png., and GOOGL.png.
+\par\bigskip
+loss: 0.007239694241434336\par
+RMSE for AAPL equals 9.205821423904716\par
+RMSE for AMZN equals 6.248347468675569\par
+RMSE for GOOGL equals 9.552054273137703\par
+RMSE for LYFT equals 2.1290812183842194\par
+RMSE for NVDA equals 8.775806702137338\par
+RMSE for TSLA equals 5.196206788544533\par
 
 \begin{figure}
 % \centering
@@ -179,6 +229,14 @@ decrease in prices is signaled. In this model, short-term price fluctuations wer
 charts. Few-day discounts or increases are not reflected in the red line. Sudden, rapid
 changes are not included in this model. In addition, the red line is significantly shifted to the right and
 runs higher than the blue line for its entire length.
+\par\bigskip
+loss: 0.01530853658914566\par
+RMSE for AAPL equals 8.821475143305953\par
+RMSE for AMZN equals 8.298883063025912\par
+RMSE for GOOGL equals 6.907164316613046\par
+RMSE for LYFT equals 2.7909029046154528\par
+RMSE for NVDA equals 7.455910063022197\par
+RMSE for TSLA equals 5.396200631636798\par
 
 \begin{figure}
 % \centering
@@ -204,6 +262,14 @@ a sudden one-day price increase, as in the charts for GOOGL.png., and NVDA.png.,
 however, in these cases, the blue line peaks do not go much above the red line. In addition, the red
 line has a much more gentle course compared to the blue line, and it is flattened in places with very rapid price changes. What is worth noticing, the long-term systematic progression of
 prices is precisely marked, and both lines have an almost identical course.
+\par\bigskip
+loss: 0.010029036551713943\par
+RMSE for AAPL equals 12.851150959540742\par
+RMSE for AMZN equals 7.454121214576205\par
+RMSE for GOOGL equals 9.329325048731752\par
+RMSE for LYFT equals 2.8188979984881253\par
+RMSE for NVDA equals 10.223120885378568\par
+RMSE for TSLA equals 7.377703064209013\par
 
 \begin{figure}
 % \centering
@@ -228,6 +294,14 @@ of predicting market prices. The longer-lasting, consistent increase in market p
 illustrated in the chart for NVDA.png., GOOGL.png, AAPL.png, and TSLA.png. On the other hand,
 sharp one-day price drops reflected in sharply deflected down peaks, for example, TSLA.png or AAPL.png
 do not translate into the course of the blue line.
+\par\bigskip
+loss: 0.007714248728007078\par
+RMSE for AAPL equals 11.88924944538701\par
+RMSE for AMZN equals 5.480018686104509\par
+RMSE for GOOGL equals 8.8859280161446\par
+RMSE for LYFT equals 2.099414458241764\par
+RMSE for NVDA equals 8.83767288601412\par
+RMSE for TSLA equals 5.368450472072029\par
 
 \begin{figure}
 % \centering
@@ -237,6 +311,36 @@ do not translate into the course of the blue line.
 \includegraphics[width=0.5\textwidth]{./graf/model9/LYFT.png}
 \includegraphics[width=0.5\textwidth]{./graf/model9/NVDA.png}
 \includegraphics[width=0.5\textwidth]{./graf/model9/TSLA.png}
-\caption{Real and predicted prices of the nineth model.}
+\caption{Real and predicted prices of the ninth model.}
 \label{fig:label}
 \end{figure} 
+
+\clearpage
+\subsection{Comparison of models 1-9}
+Different conclusions can be drawn when analyzing the results, depending on whether the analysis is graphical or analytical. Comparing the graphs, it can be concluded that the later models (5, 6) are better than the others. The first models, especially, look worse (1, 2, 3). However, analyzing the root-mean-square errors and losses, the first model appears to be the best, and the higher the model number, the worse its accuracy.
+The important thing is that models can be evaluated in many different ways (for example considering accuracy, speed, or performance) and should be compared against different criteria. Both graph analysis and error analysis are of great value.
+Many generated graphs and the presented analytical data confirm that the presented tool makes learning more accessible and allows one to become familiar with the operation and behavior of neural networks.
+\clearpage
+\setlength\tabcolsep{0pt}
+\begin{table}
+    \centering
+    \caption{RMSE values for different companies and for different models.}
+    \label{id:tab:wyniki}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} cccccccccc }%{rrrrrrrrrr}
+    \toprule
+                 &                                     \multicolumn{8}{c}{Models}                                      \\
+                 \cmidrule{2-10}
+                 \cmidrule(r){4-6}\cmidrule(r){7-10}
+        Companies &     Model 1 &   Model 2 & Model 3 & Model 4 & Model 5 & Model 6 & Model 7 & Model 8 & Model 9 \\
+    \midrule
+              AAPL  & 10.51& 8.91 & 10.38 & 8.9    & 8.45  & 9.21 & 8.82  & 12.85 & 11.89 \\
+              AMZN  & 1.99 & 1.13 & 2.19  & 7.51   & 6.33  & 6.25 & 8.3   & 7.45  & 5.48 \\
+              GOOGL & 4.94 & 6.08 & 7.8   & 5.31   & 7.81  & 9.55 & 6.91  & 9.33  & 8.89 \\
+              LYFT  & 2.12 & 2.05 & 2.3   & 1.99   & 1.56  & 2.13 & 2.79  & 2.82  & 2.1 \\
+              NVDA  & 4.15 & 4.73 & 6.12  & 6.67   & 6.94  & 8.78 & 7.46  & 10.22 & 8.84 \\
+              TSLA  & 0.3  & 1.18 & 1.19  & 0.59   & 2.5   & 5.2  & 5.4   & 7.38  & 5.37 \\
+              Mean value  & 4 & 4.01 & 4.99 & 5.16 & 5.6   & 6.86 & 6.61  & 8.34  & 7.1 \\
+    \bottomrule
+    \end{tabular*}
+    \end{table}  
+    

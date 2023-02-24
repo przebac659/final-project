@@ -29,7 +29,7 @@ class Data:
         # balance_sheet_data_qt = yahoo_financials.get_financial_stmts('quarterly', 'balance')
         data_prices_raw = yahoo_financials.get_historical_price_data(self.startDate, self.endDate, self.interval)
         data_prices = data_prices_raw[self.company_name]['prices'] # access the inner dictionary as the raw data is in JSON
-        print(data_prices)
+        # print(data_prices)
 
         self.highest_price = 0
         for i in range(len(data_prices)):

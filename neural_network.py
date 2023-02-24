@@ -23,7 +23,7 @@ class NeuralNetwork:
 
     def evaluate_model(self, data_prediction, data_result):
         self.model.fit(data_prediction, data_result, batch_size=1, epochs=Variables.epochs)
-        # self.model.evaluate(data_prediction,  data_result, verbose=2)
+        print(self.model.evaluate(data_prediction,  data_result, verbose=2))
 
     def save_model(self, name):
         return self.model.save('models/' + name)

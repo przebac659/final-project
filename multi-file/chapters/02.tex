@@ -12,7 +12,7 @@ AI is used for a wide variety of tasks and applications. Some examples include:
     \item Healthcare: AI can be used to analyze medical images, identify potential health risks, and assist doctors in making diagnoses.
     \item Fraud detection: AI can be used to identify suspicious patterns of behavior in financial transactions.
 \end{itemize} 
-These are just a few examples of the many ways AI is being used today, and as the technology continues to advance, it is likely to be used in an even wider range of applications in the future.
+These are just a few examples of the many ways AI is being used today, and as the technology continues to advance, it is likely to be used in an even wider range of applications in the future.\cite{bib:whatIsAI}
 
 \section{AI in stock prediction}
 Since the beginning of Artificial Intelligence, people have wanted to use it for profit. The concept of a program that would be able to predict the future of the stock market is an idea that inspires many engineers to act. This is an unachievable goal, but AI is constantly evolving thanks to this challenge.
@@ -20,10 +20,10 @@ Since the beginning of Artificial Intelligence, people have wanted to use it for
 Predicting stock prices is a challenging task that has been the subject of much research in AI and machine learning. Various neural network architectures have been used for this task, and the choice of architecture will depend on the specific characteristics of the data and the problem at hand.
 Some popular architectures that have been used for stock price prediction include:
 \begin{itemize}
-    \item Recurrent Neural Networks (RNNs): RNNs are particularly well-suited to sequential data, such as time series data, and have been used to predict stock prices by analyzing historical price and trading volume data.
-    \item Long Short-Term Memory (LSTM) networks: LSTMs are a type of RNN that are able to maintain a long-term memory of the inputs it has seen and has been used to predict stock prices by analyzing historical price data.
-    \item Convolutional Neural Networks (CNNs): CNNs are a type of neural network that are particularly well-suited to image and video data and have been used to predict stock prices by analyzing images of stock charts.
-    \item Gated Recurrent Units (GRUs): Similar to LSTMs but with less computational complexity.
+    \item Recurrent Neural Networks (RNNs): RNNs are particularly well-suited to sequential data, such as time series data, and have been used to predict stock prices by analyzing historical price and trading volume data.\cite{bib:NNtypes}
+    \item Long Short-Term Memory (LSTM) networks: LSTMs are a type of RNN that are able to maintain a long-term memory of the inputs it has seen and has been used to predict stock prices by analyzing historical price data.\cite{bib:LSTM-prediction}\cite{bib:NNtypes}
+    \item Convolutional Neural Networks (CNNs): CNNs are a type of neural network that are particularly well-suited to image and video data and have been used to predict stock prices by analyzing images of stock charts.\cite{bib:NNtypes}
+    \item Gated Recurrent Units (GRUs): Similar to LSTMs but with less computational complexity.\cite{bib:GRU-prediction}
 \end{itemize} 
 It is worth noting that stock price prediction is a complex problem, and only some models would work best for some scenarios. Many other variables, such as news, announcements, market sentiments, and trends, also need to be taken into account and can be incorporated into the model using techniques like Sentiment Analysis and Named Entity Recognition.
 It is also important to mention that stock prices are highly dynamic and non-linear, making it difficult to predict with high accuracy, and multiple models with different architectures may need to be combined to produce an accurate prediction.
@@ -44,16 +44,10 @@ The LSTM architecture is used in various sequential data processing tasks, such 
 Stock prices can be predicted using a combination of methods, including technical analysis, fundamental analysis, quantitative analysis, and news analysis.
 
 \begin{itemize}
-    \item Technical analysis: This method involves analyzing charts and historical data to identify patterns and trends that can indicate future stock price movements. Technical analysts look at factors such as support and resistance levels, moving averages, and trading volume to make predictions about future price movements.
-    \item Fundamental analysis: This method involves analyzing a company's financial and economic fundamentals, such as earnings, revenue, and debt, to determine its intrinsic value and potential for future growth. Fundamental analysts look at a company's financial statements and other financial metrics to predict its future performance and stock price.
-    \item Quantitative analysis: This method involves using mathematical models and algorithms to analyze financial data and make predictions about future stock prices. Quantitative analysts use statistical methods and machine learning techniques to analyze large amounts of data and make predictions about future stock prices.
-    \item News analysis: This method involves analyzing news and events that may impact a company's stock price, such as changes in management, mergers, and acquisitions, or regulatory developments.
+    \item Technical analysis: This method involves analyzing charts and historical data to identify patterns and trends that can indicate future stock price movements. Technical analysts look at factors such as support and resistance levels, moving averages, and trading volume to make predictions about future price movements.\cite{bib:technicalAnalysis} \cite{bib:techFundamentalAnalysis}
+    \item Fundamental analysis: This method involves analyzing a company's financial and economic fundamentals, such as earnings, revenue, and debt, to determine its intrinsic value and potential for future growth. Fundamental analysts look at a company's financial statements and other financial metrics to predict its future performance and stock price.\cite{bib:techFundamentalAnalysis}
+    \item Quantitative analysis: This method involves using mathematical models and algorithms to analyze financial data and make predictions about future stock prices. Quantitative analysts use statistical methods and machine learning techniques to analyze large amounts of data and make predictions about future stock prices.\cite{bib:quantitativeAnalysis}
+    \item News analysis: This method involves analyzing news and events that may impact a company's stock price, such as changes in management, mergers, and acquisitions, or regulatory developments.\cite{bib:newsAnalysis}
     \item It is important to note that no method is perfect, and past performance does not guarantee future results. Additionally, stock prices can be affected by many factors, including macroeconomic conditions, geopolitical events, and investor sentiment, which can be challenging to predict.
 \end{itemize} 
-
-Mathematical formulae  
-\begin{align}
-y = \frac{\partial x}{\partial t}
-\end{align}
-and single math symbols $x$ and $y$ are typeset in the mathematical mode.
 

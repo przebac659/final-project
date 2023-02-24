@@ -1,21 +1,10 @@
 \chapter{Internal specification}
 
-\begin{itemize}
-\item concept of the system
-\item system architecture
-\item description of data structures (and data bases)
-\item components, modules, libraries, resume of important classes (if used)
-\item resume of important algorithms (if used)
-\item details of implementation of selected parts
-\item applied design patterns
-\item UML diagrams
-\end{itemize}
 
 \section{Documentation}
 
 This section consists of variables that are used later in the project. By changing these values, modification of the application is possible. All variables that matter are stored here. company{\_}name and price{\_}type are used in reading data from Yahoo Finance. In company{\_}name, the NASDAQ (National Association of Securities Dealers Automated Quotations) ticker symbol should be imputed so that the appropriate company data could be read. The ticker symbol is an abbreviation of the company name used in NASDAQ to associate a particular company with its data. In price{\_}type, the type of price that should be read should be specified from open price (open), closing price (close), the highest price of the given period of time (high), lowest price of the given period of time (low) or the volume traded (volume).
 
-\clearpage
 \begin{figure}
 \centering
 \begin{lstlisting}
@@ -37,10 +26,10 @@ This section consists of variables that are used later in the project. By changi
 \label{fig:pseudocode:listings}
 \end{figure}
 
+\clearpage
 YahooFinancials is easy to use and outputs raw data that can be conveniently used later. data{\_}price{\_}raw stores all data of a given company in the time period between startDate and endDate in chosen intervals. data{\_}prices stores only the prices without the index of date, name, et cetera.
 Two ‘for loops’ append the data to the arrays created earlier. The data is assigned so that the neural network’s input data is the chosen number of days, and the test data is the next day so that the next day can be predicted on the chosen number of the days before it. For example, for chosen 30 days, the input data are 29 days, and the output should be the one next day (29:1).
 
-\clearpage
 \begin{figure}
 \centering
 \begin{lstlisting}
@@ -61,9 +50,9 @@ Two ‘for loops’ append the data to the arrays created earlier. The data is a
 \label{fig:pseudocode:listings}
 \end{figure}
 
+\clearpage
 In order to train the model, the gathered data should be reshaped so that they have three dimensions. This operation can be done with a few arithmetic operations, but it is more convenient to use reliable methods to do so. Firstly, the given data is transformed with minmax{\_}scale() to normalize the data between 0 and 0.999. Then using the numpy reshape() function, the data is reshaped into three dimensions.
 
-\clearpage
 \begin{figure}
 \centering
 \begin{lstlisting}
@@ -80,11 +69,12 @@ In order to train the model, the gathered data should be reshaped so that they h
 \label{fig:pseudocode:listings}
 \end{figure}
 
+\clearpage
 As it was stated before in this paper, the chosen type of model for this project is the Sequential model, as it was proven to work best for such solutions in different papers. In this project, several combinations of different layers have been considered, and finally, the layers presented below have been added to the model.
 \par
 
 LSTM -> Dropout -> LSTM -> Dropout -> Dense
-\clearpage
+
 \begin{figure}
 \centering
 \begin{lstlisting}
@@ -99,8 +89,9 @@ LSTM -> Dropout -> LSTM -> Dropout -> Dense
 \label{fig:pseudocode:listings}
 \end{figure}
 
-The model has been compiled using the ‘adam’ optimizer, and for loss, ‘mean squared error’ has been used.
 \clearpage
+The model has been compiled using the ‘adam’ optimizer, and for loss, ‘mean squared error’ has been used.
+
 \begin{figure}
 \centering
 \begin{lstlisting}
@@ -111,8 +102,9 @@ The model has been compiled using the ‘adam’ optimizer, and for loss, ‘mea
 \label{fig:pseudocode:listings}
 \end{figure}
 
-PyPlot has been used for plotting the result for testing purposes as it provides very clear and easy-to-read graphs. In order to verify how this model can predict future prices, the two graphs have been combined - the one with the actual prices (blue) and the one with the predicted prices (red). Before printing the results, the predicted future prices are put through the min-max scaler to transform them back into real values.
 \clearpage
+PyPlot has been used for plotting the result for testing purposes as it provides very clear and easy-to-read graphs. In order to verify how this model can predict future prices, the two graphs have been combined - the one with the actual prices (blue) and the one with the predicted prices (red). Before printing the results, the predicted future prices are put through the min-max scaler to transform them back into real values.
+
 \begin{figure}
 \centering
 \begin{lstlisting}
@@ -135,8 +127,9 @@ PyPlot has been used for plotting the result for testing purposes as it provides
 \label{fig:pseudocode:listings}
 \end{figure}
 
-The layouts have been used to manage the graphical interface efficiently and allow future developers to upgrade the application easily. There are easier and probably even more convenient ways of setting up a GUI for quite a small application, but this approach is recommended and provides a more transparent code. The main window is divided into two areas -  upper and lower panels. The upper panel will consist of a graph of the stock prices. The lower panel will have a list of companies whose stocks could be presented on the graph.
 \clearpage
+The layouts have been used to manage the graphical interface efficiently and allow future developers to upgrade the application easily. There are easier and probably even more convenient ways of setting up a GUI for quite a small application, but this approach is recommended and provides a more transparent code. The main window is divided into two areas -  upper and lower panels. The upper panel will consist of a graph of the stock prices. The lower panel will have a list of companies whose stocks could be presented on the graph.
+
 \begin{figure}
 \centering
 \begin{lstlisting}
@@ -150,9 +143,10 @@ The layouts have been used to manage the graphical interface efficiently and all
 \label{fig:pseudocode:listings}
 \end{figure}
 
+\clearpage
 In order to easily show and change pictures, a QPixmap with QLabel has been used.
 This QLabel has been set to be scalable. To change pictures, a list of companies has been provided using QComboBox. All the companies assigned to variable company{\_}name have been added to the list. Then the event of changing the company in the list has been assigned to a method named update{\_}image.
-\clearpage
+
 \begin{figure}
 \centering
 \begin{lstlisting}
@@ -178,8 +172,9 @@ This QLabel has been set to be scalable. To change pictures, a list of companies
 \label{fig:pseudocode:listings}
 \end{figure}
 
-This method checks which company is chosen and changes what QPixmap displays accordingly.
 \clearpage
+This method checks which company is chosen and changes what QPixmap displays accordingly.
+
 \begin{figure}
 \centering
 \begin{lstlisting}
